@@ -13,7 +13,7 @@ function TechStack() {
           <img 
             src={tech.icon} 
             alt={tech.name} 
-            className="w-10 h-10 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+            className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110"
           />
         </div>
       ))}

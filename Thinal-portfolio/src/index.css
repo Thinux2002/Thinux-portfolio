@@ -228,17 +228,17 @@ background-color: #000;
 }
 
 .navbar-social-icon {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
-  opacity: 0.6;
-  filter: grayscale(1) brightness(1.5);
+  filter: invert(1); /* Makes black icons white */
+  opacity: 0.9;
   transition: all 0.3s ease;
 }
 
 .navbar-social-link:hover .navbar-social-icon {
   opacity: 1;
-  filter: grayscale(0) brightness(1);
+  filter: invert(1) brightness(1.2);
   transform: scale(1.1);
 }
 
