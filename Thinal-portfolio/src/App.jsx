@@ -14,32 +14,35 @@ import {
 } from "./components";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        {/* <Feedbacks /> */}
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
+      <div className="relative z-0 bg-primary overflow-x-hidden">
+        <Navbar />
+        
+        <div className="relative z-0">
           <Hero />
-        <StarsCanvas />
+          <StarsCanvas />
         </div>
-        <div className="relative z-0 w-full">
-          <div>
-            <About />
-          </div>
-         
+        
+        <div className="relative z-0">
+          <About />
         </div>
-        <Experience />
-        <Works />
-        <div className="relative z-0 w-full">
-          <div>
-            <Contact />
-            <Footer />
-          </div>
-          
+        
+        <div className="relative z-0">
+          <Experience />
         </div>
+        
+        <div className="relative z-0">
+          <Works />
+        </div>
+        
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );

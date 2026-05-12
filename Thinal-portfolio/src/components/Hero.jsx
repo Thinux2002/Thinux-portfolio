@@ -28,7 +28,7 @@ const Hero = () => {
       <HeroText />
 
       {/* 3 — Astronaut PNG (replaces Three.js Canvas) */}
-      <AstronautImage isMobile={isMobile} />
+      {/* <AstronautImage isMobile={isMobile} /> */}
 
       {/* 4 — Profile photo badge top-right */}
       <ProfileBadge />

@@ -117,8 +117,8 @@ const technologies = [
     icon: technologiesImgs.mongodb,
   },
   {
-    name: "Three JS",
-    icon: technologiesImgs.threejs,
+    name: "TypeScript",
+    icon: technologiesImgs.typescript,
   },
   {
     name: "git",

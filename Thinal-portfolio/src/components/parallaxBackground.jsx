@@ -6,7 +6,7 @@ const ParallaxBackground = () => {
   const smooth = useSpring(scrollYProgress, { damping: 50, stiffness: 100 });
 
   const mountain3Y = useTransform(smooth, [0, 0.5], ["0%", "70%"]);
-  const planetsX   = useTransform(smooth, [0, 0.5], ["0%", "-20%"]);
+  const planetsX = useTransform(smooth, [0, 0.5], ["0%", "-20%"]);
   const mountain2Y = useTransform(smooth, [0, 0.5], ["0%", "30%"]);
   const mountain1Y = useTransform(smooth, [0, 0.5], ["0%", "0%"]);
 

@@ -8,9 +8,9 @@ const ProfileBadge = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.8, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       // z-50 — above everything including the astronaut
-      className="fixed top-5 right-5 z-50 flex items-center gap-3
-                 bg-black/50 backdrop-blur-md border border-white/10
-                 rounded-full px-3 py-2 cursor-default"
+      className="fixed top-24 right-5 z-50 flex items-center gap-3
+                 bg-black/60 backdrop-blur-xl border border-white/10
+                 rounded-full px-4 py-2 cursor-default shadow-2xl"
     >
       {/* Avatar ring */}
       <div

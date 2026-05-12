@@ -18,6 +18,7 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
+import typescript from "./tech/typescript.png";
 
 import acicts from "./company/acicts.png";
 import o3dynamix from "./company/o3dynamix.png";
@@ -89,4 +90,5 @@ export const technologiesImgs = {
   reactjs,
   tailwind,
   threejs,
+  typescript
 }
