@@ -4,158 +4,105 @@ import FlipWords from "./FlipWords";
 
 const HeroText = () => {
   const words = [
+    "Software Engineer",
     "Full Stack Developer",
     "Mobile App Developer",
     "UI/UX Designer",
-    "New Innovator",
     "AI Enthusiast",
   ];
 
   const slide = (delay) => ({
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
-      x: 0,
-      transition: { delay, duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+      y: 0,
+      transition: { delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
     },
   });
 
   return (
-    <>
-      {/* Left-side gradient scrim — keeps text readable over parallax */}
-      <div
-        className="absolute inset-0 pointer-events-none z-10"
-        style={{
-          background:
-            "linear-gradient(100deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.10) 65%, transparent 80%)",
-        }}
-      />
+    <div className="absolute inset-0 z-[45] flex flex-col justify-center px-6 md:px-20 lg:px-32 select-none pointer-events-none">
+      <div className="pointer-events-auto max-w-5xl">
+        {/* Subtle line and status */}
+        <motion.div
+          variants={slide(0.5)}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center gap-3 mb-8"
+        >
+          <div className="w-12 h-px bg-orange-500" />
+          <span className="font-mono text-[10px] tracking-[6px] uppercase text-orange-500 font-bold">
+            Available for new opportunities
+          </span>
+        </motion.div>
 
-      {/* Text block — left-aligned, vertically centred */}
-      <div
-        className="absolute inset-0 z-30 flex flex-col justify-center
-                   px-10 md:px-16 lg:px-24 pb-20 pointer-events-none"
-      >
-        <div className="pointer-events-auto max-w-xl">
-
-          {/* Tag */}
-          <motion.p
-            variants={slide(0.4)}
-            initial="hidden"
-            animate="visible"
-            className="font-mono text-[11px] tracking-[5px] uppercase
-                       text-orange-400/80 mb-6"
-          >
-            Portfolio — 2025
-          </motion.p>
-
-          {/* THINAL — solid white */}
-          <motion.h1
-            variants={slide(0.6)}
-            initial="hidden"
-            animate="visible"
-            className="font-black text-white leading-[0.88] tracking-tight"
-            style={{
-              fontFamily: "'Syne', 'Arial Black', sans-serif",
-              fontSize: "clamp(80px, 11vw, 155px)",
-            }}
-          >
-            THINAL
-          </motion.h1>
-
-          {/* DILMITH — outlined, with a solid dark fill behind it so it
-              doesn't bleed into the mountains unreadably */}
-          <motion.div
-            variants={slide(0.75)}
-            initial="hidden"
-            animate="visible"
-            className="relative"
-          >
-            {/* Dark fill clone behind outline for legibility */}
-            <h1
-              aria-hidden="true"
-              className="font-black leading-[0.88] tracking-tight select-none
-                         absolute inset-0"
-              style={{
-                fontFamily: "'Syne', 'Arial Black', sans-serif",
-                fontSize: "clamp(80px, 11vw, 155px)",
-                color: "rgba(0,0,0,0.45)",
-                WebkitTextStroke: "0px transparent",
-              }}
-            >
+        {/* Big Headline */}
+        <motion.div
+          variants={slide(0.7)}
+          initial="hidden"
+          animate="visible"
+          className="relative"
+        >
+          <h1 className="text-white font-black tracking-tighter leading-[0.85] flex flex-col"
+            style={{ fontSize: "clamp(64px, 13vw, 175px)" }}>
+            <span className="relative z-10">THINAL</span>
+            <span className="relative z-10 text-white/60 group-hover:text-white transition-all duration-700 uppercase">
               DILMITH
-            </h1>
-            {/* Outlined text on top */}
-            <h1
-              className="font-black leading-[0.88] tracking-tight relative"
-              style={{
-                fontFamily: "'Syne', 'Arial Black', sans-serif",
-                fontSize: "clamp(80px, 11vw, 155px)",
-                WebkitTextStroke: "2.5px rgba(255,255,255,0.65)",
-                color: "transparent",
-              }}
-            >
-              DILMITH
-            </h1>
-          </motion.div>
-
-          {/* Role flip */}
-          <motion.div
-            variants={slide(0.95)}
-            initial="hidden"
-            animate="visible"
-            className="flex items-center gap-x-2 mt-7"
-          >
-            <span
-              className="text-white/60"
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(16px, 2vw, 22px)",
-                fontWeight: 400,
-              }}
-            >
-              I&apos;m a
             </span>
+          </h1>
+
+          {/* Decorative background number */}
+          <div className="absolute -top-12 -left-12 opacity-[0.03] text-white font-black text-[250px] pointer-events-none select-none">
+            01
+          </div>
+        </motion.div>
+
+        {/* Role and Typewriter */}
+        <motion.div
+          variants={slide(0.9)}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col md:flex-row md:items-center gap-4 mt-10"
+        >
+          <p className="text-white/60 text-xl md:text-3xl font-light tracking-tight">
+            Digital Architect &
+          </p>
+          <div className="bg-white/5 backdrop-blur-md px-6 py-2 rounded-2xl border border-white/10 shadow-xl">
             <FlipWords
               words={words}
-              interval={2800}
-              className="font-bold text-orange-400"
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(16px, 2vw, 22px)",
-              }}
+              interval={3000}
+              className="font-bold text-orange-500 text-xl md:text-3xl tracking-tight"
             />
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* CTA buttons */}
-          <motion.div
-            variants={slide(1.15)}
-            initial="hidden"
-            animate="visible"
-            className="flex flex-wrap gap-4 mt-9"
+        {/* Action Buttons */}
+        <motion.div
+          variants={slide(1.1)}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-wrap gap-6 mt-14"
+        >
+          <a
+            href="#projects"
+            className="group relative overflow-hidden rounded-full bg-orange-500 px-12 py-5 font-bold text-black transition-all hover:bg-orange-400 active:scale-95 shadow-[0_15px_30px_rgba(239,123,69,0.3)] hover:shadow-[0_20px_40px_rgba(239,123,69,0.4)]"
           >
-            <button
-              className="font-mono text-[11px] tracking-[3px] uppercase
-                         px-8 py-4 bg-orange-500 hover:bg-orange-400
-                         active:scale-95 text-black font-bold
-                         transition-all duration-200 rounded-none"
-            >
-              View Work
-            </button>
-            <button
-              className="font-mono text-[11px] tracking-[3px] uppercase
-                         px-8 py-4 border border-white/30
-                         hover:border-orange-400 hover:text-orange-300
-                         text-white/60 transition-all duration-200
-                         rounded-none backdrop-blur-sm"
-            >
-              Contact Me
-            </button>
-          </motion.div>
+            <span className="relative z-10 flex items-center gap-3 uppercase tracking-widest text-[12px]">
+              Explore Projects <i className="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform duration-300" />
+            </span>
+          </a>
 
-        </div>
+          <a
+            href="#contact"
+            className="group relative overflow-hidden rounded-full border border-white/20 px-12 py-5 font-bold text-white transition-all hover:bg-white/5 active:scale-95 backdrop-blur-md hover:border-white/40"
+          >
+            <span className="relative z-10 uppercase tracking-widest text-[12px] flex items-center gap-3">
+              Work Together <i className="fa-solid fa-envelope text-white/40 group-hover:text-white transition-colors" />
+            </span>
+          </a>
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import ParallaxBackground from "./parallaxBackground";
 import HeroText from "./HeroText";
-import AstronautImage from "./Astronaut";
 import ProfileBadge from "./Profilebadge";
 
 const Hero = () => {
@@ -20,37 +19,44 @@ const Hero = () => {
 
   return (
     <section className="relative flex items-start justify-center min-h-screen overflow-hidden">
-
-      {/* 1 — Parallax mountain / sky layers */}
+      {/* Dynamic Background Layers */}
       <ParallaxBackground />
 
-      {/* 2 — Name, role typewriter, CTA buttons */}
+      {/* Main Content Content */}
       <HeroText />
 
-      {/* 3 — Astronaut PNG (replaces Three.js Canvas) */}
-      {/* <AstronautImage isMobile={isMobile} /> */}
-
-      {/* 4 — Profile photo badge top-right */}
+      {/* Profile Status Badge */}
       <ProfileBadge />
 
-      {/* 5 — Scroll indicator */}
+      {/* Premium Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30
-                   flex flex-col items-center gap-2"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2.5, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center"
       >
-        <span className="font-mono text-[9px] tracking-[4px] uppercase text-white/25">
-          scroll
-        </span>
-        <motion.div
-          animate={{ scaleY: [1, 0.4, 1], opacity: [0.4, 1, 0.4] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent"
-        />
+        <div className="w-[28px] h-[48px] rounded-full border-2 border-white/10 flex justify-center p-2 mb-4 backdrop-blur-sm">
+           <motion.div 
+             animate={{ 
+               y: [0, 16, 0],
+               opacity: [0.3, 1, 0.3],
+               scale: [1, 0.8, 1]
+             }}
+             transition={{ 
+               duration: 2, 
+               repeat: Infinity, 
+               ease: "easeInOut" 
+             }}
+             className="w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(239,123,69,1)]"
+           />
+        </div>
+        <p className="font-mono text-[9px] tracking-[5px] uppercase text-white/30 font-bold ml-1">
+          Discovery
+        </p>
       </motion.div>
 
+      {/* Bottom Vignette Overlay */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-30" />
     </section>
   );
 };

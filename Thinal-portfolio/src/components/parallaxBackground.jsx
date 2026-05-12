@@ -15,18 +15,18 @@ const ParallaxBackground = () => {
       <div className="relative h-screen overflow-hidden">
 
         {/* Sky */}
-        <div
-          className="absolute inset-0 w-full h-screen -z-50"
+        {/* <div
+          className="absolute inset-0 w-full h-screen z-0"
           style={{
-            backgroundImage: "url(/assets/sky.png)",
+            backgroundImage: "url(/assets/sky.jpg)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
           }}
-        />
+        /> */}
 
         {/* Mountain 3 (far) */}
         <motion.div
-          className="absolute inset-0 -z-40"
+          className="absolute inset-0 z-10"
           style={{
             backgroundImage: "url(/assets/mountain-3.png)",
             backgroundPosition: "bottom",
@@ -37,7 +37,7 @@ const ParallaxBackground = () => {
 
         {/* Planets */}
         <motion.div
-          className="absolute inset-0 -z-30"
+          className="absolute inset-0 z-20"
           style={{
             backgroundImage: "url(/assets/planets.png)",
             backgroundPosition: "bottom",
@@ -48,7 +48,7 @@ const ParallaxBackground = () => {
 
         {/* Mountain 2 */}
         <motion.div
-          className="absolute inset-0 -z-20"
+          className="absolute inset-0 z-30"
           style={{
             backgroundImage: "url(/assets/mountain-2.png)",
             backgroundPosition: "bottom",
@@ -59,7 +59,7 @@ const ParallaxBackground = () => {
 
         {/* Mountain 1 (near) */}
         <motion.div
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 z-40"
           style={{
             backgroundImage: "url(/assets/mountain-1.png)",
             backgroundPosition: "bottom",
