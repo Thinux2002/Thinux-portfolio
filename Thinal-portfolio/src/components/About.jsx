@@ -86,7 +86,7 @@ const About = () => {
         </motion.div>
       </div>
 
-      <div className="mt-32">
+      {/* <div className="mt-32">
         <div className="flex flex-col mb-12">
           <p className={styles.sectionSubText}>How I can help</p>
           <h3 className="text-white text-[32px] font-bold">Services</h3>
@@ -96,7 +96,7 @@ const About = () => {
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

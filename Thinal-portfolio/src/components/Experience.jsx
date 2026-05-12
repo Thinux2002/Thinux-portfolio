@@ -1,58 +1,63 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import React from "react";
 import { motion } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../style";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant, slideIn, fadeIn } from "../utils/motion";
-
+import { textVariant, fadeIn } from "../utils/motion";
 import GitHubCalendar from "react-github-calendar";
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ 
-      background: "rgba(255, 255, 255, 0.03)", 
-      color: "#fff",
-      boxShadow: "none",
-      border: "1px solid rgba(255, 255, 255, 0.05)",
-      borderRadius: "1.5rem"
-    }}
-    contentArrowStyle={{ borderRight: "7px solid rgba(255, 255, 255, 0.05)" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
-      </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[20px] font-bold">
-        {experience.title}
-      </h3>
-      <p
-        className="text-orange-400 text-[16px] font-semibold"
-        style={{ margin: 0 }}
+const ExperienceCard = ({ experience, index }) => {
+  const isEven = index % 2 === 0;
+
+  return (
+    <div className={`relative flex items-center justify-between mb-12 md:mb-24 w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+      {/* Central Dot */}
+      <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(239,123,69,0.8)] z-10" />
+      
+      {/* Content */}
+      <motion.div
+        variants={fadeIn(isEven ? "left" : "right", "spring", index * 0.4, 0.75)}
+        className="w-full md:w-[44%] ml-8 md:ml-0"
       >
-        {experience.company_name}
-      </p>
+        <div className="glass-card p-6 md:p-8 hover:border-orange-500/30 transition-all duration-500 group">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
+            <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-500">
+              <img 
+                src={experience.icon} 
+                alt={experience.company_name} 
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-white text-xl md:text-2xl font-bold tracking-tight">{experience.title}</h3>
+              <p className="text-orange-500 font-semibold tracking-wide uppercase text-sm mt-1">{experience.company_name}</p>
+            </div>
+          </div>
+
+          <div className="inline-block px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 mb-6">
+             <p className="text-orange-500 text-[11px] font-mono uppercase tracking-widest font-bold">
+               {experience.date}
+             </p>
+          </div>
+
+          <ul className="space-y-4">
+            {experience.points && experience.points.map((point, idx) => (
+              point && (
+                <li key={`exp-point-${idx}`} className="text-secondary text-[14px] md:text-[15px] leading-relaxed flex gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-orange-500/50 mt-2 flex-shrink-0" />
+                  <span>{point}</span>
+                </li>
+              )
+            ))}
+          </ul>
+        </div>
+      </motion.div>
+
+      {/* Placeholder for desktop layout */}
+      <div className="hidden md:block w-[44%]" />
     </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points && experience.points.map((point, index) => (
-        point && <li key={`experience-point-${index}`} className="text-secondary text-[14px] pl-1 tracking-wider">
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-);
+  );
+};
 
 const Experience = () => {
   const sortedExperiences = experiences.sort((a, b) => {
@@ -72,40 +77,17 @@ const Experience = () => {
         </motion.div>
       </div>
 
-      <div className="mt-10 flex flex-col">
-        <VerticalTimeline lineColor="rgba(255, 255, 255, 0.05)">
+      <div className="relative mt-20 px-4 md:px-0">
+        {/* Vertical Line */}
+        <div className="absolute left-[5.5px] md:left-1/2 transform md:-translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-orange-500 via-white/10 to-transparent opacity-20" />
+        
+        <div className="flex flex-col">
           {sortedExperiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={`exp-${index}`} index={index} experience={experience} />
           ))}
-        </VerticalTimeline>
+        </div>
       </div>
 
-      <motion.div 
-        variants={fadeIn("up", "tween", 0.3, 1)}
-        className="mt-20"
-      >
-        <div className="glass-card p-10 flex flex-col items-center justify-center">
-          <div className="text-center mb-10">
-            <h3 className="text-[28px] font-bold text-white mb-2">
-              Github Contributions
-            </h3>
-            <p className="text-orange-500 font-mono tracking-[3px] uppercase text-sm">
-              Steady Growth • 2024-2026
-            </p>
-          </div>
-          
-          <div className="w-full overflow-x-auto flex justify-center py-4">
-            <GitHubCalendar
-              username="Thinux2002"
-              colorScheme="dark"
-              theme={{
-                light: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
-                dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
-              }}
-            />
-          </div>
-        </div>
-      </motion.div>
     </>
   );
 };
