@@ -47,7 +47,7 @@ const HeroText = () => {
             style={{ fontSize: "clamp(64px, 13vw, 175px)" }}>
             <span className="relative z-10">THINAL</span>
             <span className="relative z-10 text-white/60 group-hover:text-white transition-all duration-700 uppercase">
-              DILMITH
+              DEWNAYANA
             </span>
           </h1>
 

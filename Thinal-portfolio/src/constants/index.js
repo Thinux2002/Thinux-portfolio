@@ -241,6 +241,27 @@ const projects = [
     image: projectImgs.auralink,
     source_code_link: "https://github.com/AuraLink-Desk-Assistant",
   },
+  {
+    name: "Reclaim System",
+    description:
+      "Lost and found management system for reporting, tracking, and managing items digitally with admin review features.",
+    tags: [
+      {
+        name: "web-app",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "management-system",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tracking",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.reclaim,
+    source_code_link: "https://github.com/Thinux2002/lost-found",
+  },
 
   {
     name: "Autonomous TurtleBot3",
@@ -352,27 +373,7 @@ const projects = [
     source_code_link: "https://github.com/Thinux2002/MathMider",
   },
 
-  {
-    name: "Reclaim System",
-    description:
-      "Lost and found management system for reporting, tracking, and managing items digitally with admin review features.",
-    tags: [
-      {
-        name: "web-app",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "management-system",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tracking",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: projectImgs.reclaim,
-    source_code_link: "https://github.com/Thinux2002/lost-found",
-  },
+
 
   // {
   //   name: "Thinal Portfolio",

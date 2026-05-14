@@ -1,5 +1,7 @@
 # Thinal Portfolio
 
+![Portfolio Preview](src/assets/projects/Portfolio.png)
+
 Personal portfolio website built with React, Vite, Tailwind CSS, Framer Motion, and Three.js.
 
 ## Tech Stack

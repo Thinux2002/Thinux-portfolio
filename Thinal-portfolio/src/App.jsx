@@ -19,30 +19,34 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 bg-primary overflow-x-hidden">
         <Navbar />
-        
+
         <div className="relative z-0">
           <Hero />
           <StarsCanvas />
         </div>
-        
+
         <div className="relative z-0">
           <About />
+
         </div>
-        
+
         <div className="relative z-0">
           <Experience />
+
         </div>
-        
+
         <div className="relative z-0">
           <Works />
+
         </div>
-        
+
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
 
         <Footer />
+
       </div>
     </BrowserRouter>
   );
