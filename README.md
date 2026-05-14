@@ -1,3 +1,3 @@
 # Thinux-portfolio
 
-![Portfolio Preview](Thinal-portfolio/src/assets/folio.png)
+![Portfolio Preview](Thinal-portfolio/src/assets/projects/Portfolio.png)
