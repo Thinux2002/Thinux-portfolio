@@ -29,7 +29,7 @@ export const socialLinks = [
   {
     icon: socialMediaLogos.linkedin,
     name: "linkedin",
-    url: "www.linkedin.com/in/thinal-dewnayana-9b862328b",
+    url: "https://www.linkedin.com/in/thinal-dewnayana-9b862328b/",
   },
   {
     icon: socialMediaLogos.githubicon,
