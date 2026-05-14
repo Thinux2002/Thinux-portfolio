@@ -71,7 +71,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center"
+        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center scale-75 md:scale-100"
       >
         <div className="w-[30px] h-[52px] rounded-full border-2 border-white/10 flex justify-center p-2 mb-4 backdrop-blur-md bg-white/5">
            <motion.div 
@@ -87,7 +87,7 @@ const Hero = () => {
              className="w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(239,123,69,0.8)]"
            />
         </div>
-        <p className="font-mono text-[9px] tracking-[6px] uppercase text-white/20 font-bold">
+        <p className="font-mono text-[9px] tracking-[4px] md:tracking-[6px] uppercase text-white/20 font-bold">
           Discovery
         </p>
       </motion.div>

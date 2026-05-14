@@ -28,10 +28,10 @@ const HeroText = () => {
           variants={slide(0.5)}
           initial="hidden"
           animate="visible"
-          className="flex items-center gap-3 mb-8"
+          className="flex items-center gap-2 md:gap-3 mb-8"
         >
-          <div className="w-12 h-px bg-orange-500" />
-          <span className="font-mono text-[10px] tracking-[6px] uppercase text-orange-500 font-bold">
+          <div className="w-8 md:w-12 h-px bg-orange-500" />
+          <span className="font-mono text-[9px] md:text-[10px] tracking-[3px] md:tracking-[6px] uppercase text-orange-500 font-bold">
             Available for new opportunities
           </span>
         </motion.div>
