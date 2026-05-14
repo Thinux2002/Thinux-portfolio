@@ -199,58 +199,192 @@ const testimonials = [
 
 const projects = [
   {
-    name: "RoomMate",
+    name: "RadioOneAI",
     description:
-      "An app for roommates to efficiently manage chores, bills, schedules, and communication, ensuring a harmonious and organized living environment.",
+      "AI-powered radiology platform for brain tumor detection, severity scoring, and vision-language reporting using MRI data.",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "firebase",
+        name: "deep-learning",
         color: "green-text-gradient",
       },
       {
-        name: "bootstrap",
+        name: "computer-vision",
         color: "pink-text-gradient",
       },
     ],
-    image: projectImgs.roommate,
+    image: projectImgs.radiooneai,
     source_code_link: "https://github.com/",
   },
+
   {
-    name: "Fixr",
+    name: "AuraLink",
     description:
-      "Fixr is a versatile app designed to streamline handyman services by efficiently managing job bookings, payments, and client interactions.",
+      "Smart desk assistant bot integrating AI and IoT sensors for automation, voice interactions, and real-time device control.",
     tags: [
       {
-        name: "reactnative",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "geminiai",
+        name: "iot",
         color: "green-text-gradient",
       },
       {
-        name: "firebase",
+        name: "ai",
         color: "pink-text-gradient",
       },
     ],
-    image: projectImgs.fixr,
-    source_code_link: "https://github.com/SE-S1-WE-26/Fixr.git",
+    image: projectImgs.auralink,
+    source_code_link: "https://github.com/",
   },
+
   {
-    name: "Keizerfolio",
+    name: "Autonomous TurtleBot3",
     description:
-      "The interactive 3D portfolio presents creative works in a three-dimensional space, enhancing visual appeal while showcasing expertise in UI/UX design.",
+      "Autonomous navigation system using SLAM and path-planning algorithms with obstacle avoidance and real-time mapping.",
     tags: [
       {
-        name: "threejs",
+        name: "ros",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "robotics",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.turtlebot,
+    source_code_link: "https://github.com/",
+  },
+
+  {
+    name: "Kandyan Studio",
+    description:
+      "Customer care and loyalty management website developed using the MERN stack with reporting and UI/UX features.",
+    tags: [
+      {
+        name: "mongodb",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.Kandyan,
+    source_code_link: "https://github.com/",
+  },
+
+  {
+    name: "StockworkX",
+    description:
+      "Stock management system with database schema design, wireframing, and feature implementation for group project development.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.stockworx,
+    source_code_link: "https://github.com/",
+  },
+
+  {
+    name: "Ceft Banking Website",
+    description:
+      "Banking web application for checkbook requests, customer reviews, and ratings with frontend and backend integration.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "php",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.ceftbank,
+    source_code_link: "https://github.com/",
+  },
+
+  {
+    name: "MathMinder",
+    description:
+      "Todo and reminder mobile application with CRUD functionality, local storage, and clean Android UI layouts.",
+    tags: [
+      {
+        name: "kotlin",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "android",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mobile-app",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.mathminder,
+    source_code_link: "https://github.com/",
+  },
+
+  {
+    name: "Reclaim System",
+    description:
+      "Lost and found management system for reporting, tracking, and managing items digitally with admin review features.",
+    tags: [
+      {
+        name: "web-app",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "management-system",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tracking",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectImgs.reclaim,
+    source_code_link: "https://github.com/",
+  },
+
+  {
+    name: "Thinal Portfolio",
+    description:
+      "Personal portfolio website built using React, Three.js, and EmailJS with interactive 3D animations and responsive UI.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
         color: "green-text-gradient",
       },
       {
@@ -259,112 +393,29 @@ const projects = [
       },
     ],
     image: projectImgs.portfolio,
-    source_code_link: "https://github.com/Pahan-Samudika/Keizerfolio.git",
+    source_code_link: "https://github.com/",
   },
+
   {
-    name: "Kandyan Studio",
+    name: "BOI Online Gateway",
     description:
-      "A comprehensive solution designed to streamline Kandyan Studio's operations, enhancing efficiency, creativity, project management, and team collaboration.",
+      "Online investment approval platform with secure application management, tracking, and administrative workflows.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "expressjs",
+        name: ".net",
         color: "green-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "purple-text-gradient",
-      },
-    ],
-    image: projectImgs.kandyan,
-    source_code_link: "https://github.com/ITP-T067/T067-Kandyan-Studio.git",
-  },
-  {
-    name: "StockWorX",
-    description:
-      "Efficient online stock management system with roles for various users. Developed using JSP Servlet, MySQL, and OOP.",
-    tags: [
-      {
-        name: "java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
+        name: "python",
         color: "pink-text-gradient",
       },
     ],
-    image: projectImgs.stockworx,
-    source_code_link: "https://github.com/Pahan-Samudika/StockWorX.git",
-  },
-  {
-    name: "MedCare",
-    description:
-      "MedCare provides comprehensive healthcare services, focusing on delivering high-quality care and personalized treatment to enhance patient well-being.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "purple-text-gradient",
-      },
-    ],
-    image: projectImgs.medcare,
-    source_code_link: "https://github.com/SE-S1-WE-26/MedCare-Frontend.git",
-  },
-  {
-    name: "RemMe",
-    description:
-      "Simple and intuitive task management app designed to help users stay organized and productive.",
-    tags: [
-      {
-        name: "kotlin",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "room",
-        color: "green-text-gradient",
-      },
-    ],
-    image: projectImgs.remme,
-    source_code_link: "https://github.com/Pahan-Samudika/RemMe.git",
-  },
-  {
-    name: "TapTap",
-    description:
-      "Interactive mobile game enhancing cognitive skills. Players tap dots with limited chances, increasing speed for reflex challenge.",
-    tags: [
-      {
-        name: "kotlin",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "androidstudio",
-        color: "green-text-gradient",
-      },
-    ],
-    image: projectImgs.taptap,
-    source_code_link: "https://github.com/Pahan-Samudika/TapTap.git",
+    image: projectImgs.boi,
+    source_code_link: "https://github.com/",
   },
 ];
 

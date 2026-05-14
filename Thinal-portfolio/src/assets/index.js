@@ -24,14 +24,16 @@ import acicts from "./company/acicts.png";
 import o3dynamix from "./company/o3dynamix.png";
 import boi from "./company/boi.png";
 
-import remme from "./projects/remme.png";
-import stockworx from "./projects/stockworx.png";
-import kandyan from "./projects/kandyan.png";
-import roommate from "./projects/roommate.png";
-import taptap from "./projects/taptap.png";
+import auralink from "./projects/auralink.png";
+import radiooneai from "./projects/radiooneai.png";
+import ceftbank from "./projects/ceft.png";
+import mathminder from "./projects/mathminder.png";
+import reclaim from "./projects/reclaim.png";
 import portfolio from "./projects/portfolio.png";
-import fixr from "./projects/fixr.png";
-import medcare from "./projects/medcare.png";
+import turtlebot from "./projects/turtlebot.png";
+import boi from "./projects/boi.png";
+import Kandyan from "./projects/Kandyan.png";
+import stockworx from "./projects/stockworkx.png";
 
 import linkedin from "./social/linkedin.png";
 import githubicon from "./social/github.png";
@@ -54,14 +56,16 @@ export const companylogos = {
 };
 
 export const projectImgs = {
-  remme,
-  stockworx,
-  kandyan,
-  roommate,
-  taptap,
+  auralink,
+  radiooneai,
+  ceftbank,
+  mathminder,
+  reclaim,
   portfolio,
-  fixr,
-  medcare,
+  turtlebot,
+  boi,
+  Kandyan,
+  stockworx,
 }
 
 export const servicesImgs = {
