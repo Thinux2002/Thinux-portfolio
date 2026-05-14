@@ -29,10 +29,10 @@ import radiooneai from "./projects/radiooneai.png";
 import ceftbank from "./projects/ceft.png";
 import mathminder from "./projects/mathminder.png";
 import reclaim from "./projects/reclaim.png";
-import portfolio from "./projects/portfolio.png";
+import portfolio from "./projects/Portfolio.png";
 import turtlebot from "./projects/turtlebot.png";
-import boi from "./projects/boi.png";
-import Kandyan from "./projects/Kandyan.png";
+import boiProject from "./projects/boi.png";
+import Kandyan from "./projects/kandyan.png";
 import stockworx from "./projects/stockworkx.png";
 
 import linkedin from "./social/linkedin.png";
@@ -63,7 +63,7 @@ export const projectImgs = {
   reclaim,
   portfolio,
   turtlebot,
-  boi,
+  boiProject,
   Kandyan,
   stockworx,
 }

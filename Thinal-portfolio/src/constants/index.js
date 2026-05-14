@@ -217,7 +217,7 @@ const projects = [
       },
     ],
     image: projectImgs.radiooneai,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Thinux2002/RadioOneAI_Website",
   },
 
   {
@@ -239,7 +239,7 @@ const projects = [
       },
     ],
     image: projectImgs.auralink,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/AuraLink-Desk-Assistant",
   },
 
   {
@@ -261,7 +261,7 @@ const projects = [
       },
     ],
     image: projectImgs.turtlebot,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Thinux2002/RIS_Autonomous_Navigation_of_TurtleBot3",
   },
 
   {
@@ -283,7 +283,7 @@ const projects = [
       },
     ],
     image: projectImgs.Kandyan,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ITP-T067",
   },
 
   {
@@ -305,7 +305,7 @@ const projects = [
       },
     ],
     image: projectImgs.stockworx,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Thinux2002/StockWorkX",
   },
 
   {
@@ -327,7 +327,7 @@ const projects = [
       },
     ],
     image: projectImgs.ceftbank,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Thinux2002/ceft-bank",
   },
 
   {
@@ -349,7 +349,7 @@ const projects = [
       },
     ],
     image: projectImgs.mathminder,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Thinux2002/MathMider",
   },
 
   {
@@ -371,30 +371,30 @@ const projects = [
       },
     ],
     image: projectImgs.reclaim,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Thinux2002/lost-found",
   },
 
-  {
-    name: "Thinal Portfolio",
-    description:
-      "Personal portfolio website built using React, Three.js, and EmailJS with interactive 3D animations and responsive UI.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "threejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "emailjs",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: projectImgs.portfolio,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "Thinal Portfolio",
+  //   description:
+  //     "Personal portfolio website built using React, Three.js, and EmailJS with interactive 3D animations and responsive UI.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "threejs",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "emailjs",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: projectImgs.portfolio,
+  //   source_code_link: "https://github.com/",
+  // },
 
   {
     name: "BOI Online Gateway",
@@ -414,7 +414,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: projectImgs.boi,
+    image: projectImgs.boiProject,
     source_code_link: "https://github.com/",
   },
 ];
