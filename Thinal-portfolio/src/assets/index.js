@@ -29,7 +29,7 @@ import radiooneai from "./projects/radiooneai.png";
 import ceftbank from "./projects/ceft.png";
 import mathminder from "./projects/mathminder.png";
 import reclaim from "./projects/reclaim.png";
-import portfolio from "./projects/Portfolio.png";
+import portfolio from "./projects/portfolio.png";
 import turtlebot from "./projects/turtlebot.png";
 import boiProject from "./projects/boi.png";
 import Kandyan from "./projects/kandyan.png";
