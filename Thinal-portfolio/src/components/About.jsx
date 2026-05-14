@@ -48,7 +48,7 @@ const About = () => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
         <motion.div 
           variants={fadeIn("right", "tween", 0.2, 0.8)}
-          className="relative group"
+          className="relative group max-w-sm mx-auto xl:max-w-none"
         >
           <div className="absolute -inset-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-[2.5rem] opacity-20 group-hover:opacity-30 blur-2xl transition duration-500" />
           <div className="relative glass-card p-4 rounded-[2rem] overflow-hidden">
